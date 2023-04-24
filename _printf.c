@@ -36,6 +36,12 @@ int _printf(const char *format, ...)
 			i++;
 			r_val = val - 1;
 		}
+		else if ((format[i + 1] == 'i') || (format[i + 1] == 'd'))
+		{
+			val = put_int(va_arg(print, int));
+			i++;
+			r_val = val - 1;
+		}
 
 		r_val += 1;
 	}
