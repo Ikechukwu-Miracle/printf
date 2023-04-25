@@ -86,7 +86,7 @@ int handle_put_char(char c, char buff[],
 	int flags, int width, int precision, int size);
 int put_number(int negative, int ind, char buff[],
 	int flags, int width, int precision, int size);
-int write_number(int ind, char bffr[], int flags, int width, int precision,
+int write_number(int ind, char buff[], int flags, int width, int precision,
 	int length, char pad, char extra_ch);
 int write_pointer(char buff[], int ind, int len,
 	int width, int flags, char pad, char extra_ch, int padstart);

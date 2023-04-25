@@ -30,12 +30,12 @@ int put_reverse(va_list options, char buff[],
 
 		s = ")Null(";
 	}
-	for (x = 0; str[x]; x++)
+	for (x = 0; s[x]; x++)
 		;
 
 	for (x = x - 1; x >= 0; x--)
 	{
-		z = str[x];
+		z = s[x];
 
 		_putchar(z);
 		r_val++;
@@ -86,7 +86,7 @@ int put_rot13(va_list options, char buff[],
 		}
 		if (!input[y])
 		{
-			m = str[x];
+			m = s[x];
 			_putchar(m);
 			r_val++;
 		}

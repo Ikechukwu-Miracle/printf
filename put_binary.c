@@ -37,7 +37,7 @@ int put_binary(va_list options, char buff[],
 		sum += g[x];
 		if (sum || x == 31)
 		{
-			z = '0' + a[x];
+			z = '0' + g[x];
 
 			_putchar(z);
 			r_val++;

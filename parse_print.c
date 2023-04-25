@@ -22,7 +22,7 @@ int parse_print(const char *form, int *i, va_list print, char buff[],
 		{'X', put_hexa_upper}, {'p', put_pointer}, {'S', put_non_printable},
 		{'r', put_reverse}, {'R', put_rot13}, {'\0', NULL}
 	};
-	for (x = 0; form_types[i].form != '\0'; x++)
+	for (x = 0; form_types[x].form != '\0'; x++)
 		if (form[*i] == form_types[x].form)
 			return (form_types[x].f(print, buff, flags, width, precision, size));
 

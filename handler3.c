@@ -36,7 +36,7 @@ int write_pointer(char buff[], int ind, int len,
 			buff[--ind] = '0';
 			if (extra_ch)
 				buff[--ind] = extra_ch;
-			return (write(1, &buff[3], i - 3) + write(1, &buff[ind], len));
+			return (write(1, &buff[3], x - 3) + write(1, &buff[ind], len));
 		}
 		else if (!(flags & MINUS) && pad == '0')
 		{
