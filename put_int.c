@@ -1,25 +1,44 @@
 #include "main.h"
 /**
-  * put_int - prints integer
-  * @num: number to be printed
-  * Return: length of the number
-  */
+ * put_int - Prints integer to stdout
+ * @options: List of arguments
+ * @buff: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: get width.
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed
+ */
 
-int put_int(int num)
+int put_int(va_list options, char buff[],
+	int flags, int width, int precision, int size)
 {
-	int count = 0;
+	int x = BSIZE - 2;
+	int negative = 0;
+	long int n = va_arg(options, long int);
+	unsigned long int number;
 
-	if (num < 0)
-	{
-		_putchar('-');
-		count++;
-		num = -num;
-	}
-	if (num / 10)
-	{
-		count += put_int(num / 10);
-	}
-	_putchar(num % 10 + '0');
+	n = con_size_num(n, size);
 
-	return (count);
+	if (n == 0)
+		buff[x--] = '0';
+
+	buff[BSIZE - 1] = '\0';
+	number = (unsigned long int)n;
+
+	if (n < 0)
+	{
+		number = (unsigned long int)((-1) * n);
+		negative = 1;
+	}
+
+	while (number > 0)
+	{
+		buff[x--] = (number % 10) + '0';
+		number /= 10;
+	}
+
+	x++;
+
+	return (write_number(negative, x, buff, flags, width, precision, size));
 }
