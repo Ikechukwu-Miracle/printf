@@ -54,7 +54,7 @@ int put_int(va_list options, char buff[],
 	int flags, int width, int precision, int size);
 int put_binary(va_list options, char buff[],
 	int flags, int width, int precision, int size);
-int put_unsigned(va_list options, char buff[],
+int put_unsgnd(va_list options, char buff[],
 	int flags, int width, int precision, int size);
 int put_octal(va_list options, char buff[],
 	int flags, int width, int precision, int size);
@@ -91,7 +91,7 @@ int write_number(int ind, char bffr[], int flags, int width, int precision,
 int write_pointer(char buff[], int ind, int len,
 	int width, int flags, char pad, char extra_ch, int padstart);
 
-int write_unsigned(int negative, int ind, char buff[],
+int write_unsgnd(int negative, int ind, char buff[],
 	int flags, int width, int precision, int size);
 
 int printable(char);
@@ -99,6 +99,6 @@ int append_hexa(char, char[], int);
 int _isdigit(char);
 
 long int con_size_num(long int num, int size);
-long int con_size_unsigned(unsigned long int num, int size);
+long int con_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
