@@ -40,5 +40,5 @@ int put_int(va_list options, char buff[],
 
 	x++;
 
-	return (write_number(negative, i, buff, flags, width, precision, size));
+	return (put_number(negative, x, buff, flags, width, precision, size));
 }
