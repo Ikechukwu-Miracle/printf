@@ -2,8 +2,8 @@
 
 /**
  * put_binary - Prints binary equivalent of number
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
+ * @options: Lista of arguments
+ * @buff: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width.
  * @precision: Precision specification

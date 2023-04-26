@@ -24,6 +24,7 @@ int printable(char c)
 int append_hexa(char ascii_value, char buff[], int i)
 {
 	char map[] = "0123456789ABCDEF";
+
 	if (ascii_value < 0)
 		ascii_value *= -1;
 
